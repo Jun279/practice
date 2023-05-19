@@ -58,7 +58,7 @@ body{
 #result > .result-btn{
     display: flex;
     flex-direction: column;
-    margin-top: 30vh;
+    margin-top: 20vh;
 }
 
 .result-btn button{
