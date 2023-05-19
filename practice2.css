@@ -50,15 +50,10 @@ body{
     height: 8vh;
 }
 
-#result>#choice{
-    margin-top: 30vh;
-    font-size: 3rem;
-}
-
 #result > .result-btn{
     display: flex;
     flex-direction: column;
-    margin-top: 20vh;
+    margin-top: 1vh;
 }
 
 .result-btn button{
@@ -68,4 +63,19 @@ body{
 #copy{
     width: 100%;
     height: 50px;
+}
+
+#image{
+    width: 35%;
+    height: auto;
+}
+#result > .result-content{
+    border: 3px solid gold;
+    margin: 0px;
+    font-size: 30px;
+}
+
+#explain{
+    font-size: 1rem;
+    color: rgb(194, 42, 90);
 }

@@ -11,22 +11,22 @@ var q = {
 }
 
 var result = {
-    "ESFJ":{"choice":"안정적이고 정이 많은 도전적인 사업가"},
-    "ESFP":{"choice":"안정적이고 정이 많은 도전적인 탐험가"},
-    "ESTJ":{"choice":"안정적이게 일 잘하는 도전적인 사업가"},
-    "ESTP":{"choice":"안정적이게 일 잘하는 도전적인 탐험가"},
-    "ENFJ":{"choice":"모험적이고 정이 많은 도전적인 사업가"},
-    "ENFP":{"choice":"모험적이고 정이 많은 도전적인 탐험가"},
-    "ENTJ":{"choice":"모험적이고 일 잘하는 도전적인 사업가"},
-    "ENTP":{"choice":"모험적이고 일 잘하는 도전적인 탐험가"},
-    "ISFJ":{"choice":"안정적이고 정이 많은 조용한 사업가"},
-    "ISFP":{"choice":"안정적이고 정이 많은 조용한 사업가"},
-    "ISTJ":{"choice":"안정적이고 일 잘하는 조용한 사업가"},
-    "ISTP":{"choice":"안정적이고 일 잘하는 조용한 탐험가"},
-    "INFJ":{"choice":"모험적이고 정이 많은 조용한 사업가"},
-    "INFP":{"choice":"모험적이고 정이 많은 조용한 탐험가"},
-    "INTJ":{"choice":"모험적이고 일 잘하는 조용한 사업가"},
-    "INTP":{"choice":"모험적이고 일 잘하는 조용한 탐험가"},
+    "ESFJ":{"image":"ESFJ.png","choice":"활발하며 정이 많고 안정적인 사업가","explain":"(인간 집사)"},
+    "ESFP":{"image":"ESFP.png","choice":"활발하며 정이 많고 안정적인 탐험가","explain":"(분위기 메이커🎶)"},
+    "ESTJ":{"image":"ESTJ.png","choice":"활발하며 안정적이게 일 잘하는 사업가","explain":"(무서운 학원 선생님 느낌..)"},
+    "ESTP":{"image":"ESTP.png","choice":"활발하며 안정적이게 일 잘하는 탐험가","explain":"(플러팅 장인🥰)"},
+    "ENFJ":{"image":"ENFJ.png","choice":"활발하며 모험적이고 정이 많은 사업가","explain":"(연설 대회 우승자🎙️)"},
+    "ENFP":{"image":"ENFP.jpg","choice":"활발하며 모험적이고 정이 많은 탐험가","explain":"(보부상👜)"},
+    "ENTJ":{"image":"ENTJ.png","choice":"활발하며 모험적이고 일 잘하는 사업가","explain":"(지도자(성격 나쁘면 독재자..))"},
+    "ENTP":{"image":"ENTP.png","choice":"활발하며 모험적이고 일 잘하는 탐험가","explain":"(자존감 끝판왕👍)"},
+    "ISFJ":{"image":"ISFJ.png","choice":"조용하며 정이 많고 안정적인 사업가","explain":"(지친 천사나 엄마 느낌..)"},
+    "ISFP":{"image":"ISFP.png","choice":"조용하며 정이 많고 안정적인 탐험가","explain":"(감성충인 아티스트👨‍🎨)"},
+    "ISTJ":{"image":"ISTJ.png","choice":"조용하며 안정적이게 일 잘하는 사업가","explain":"(그냥 꼰대🤨)"},
+    "ISTP":{"image":"ISTP.png","choice":"조용하며 안정적이게 일 잘하는 탐험가","explain":"(4번은 개인주의야!)"},
+    "INFJ":{"image":"INFJ.png","choice":"조용하며 정이 많고 모험적인 사업가","explain":"(몽상가💭)"},
+    "INFP":{"image":"INFP.png","choice":"조용하며 정이 많고 모험적인 탐험가","explain":"(자유로운 영혼..)"},
+    "INTJ":{"image":"INTJ.png","choice":"조용하며 모험적이고 일 잘하는 사업가","explain":"(비밀 가득한 현자🧐)"},
+    "INTP":{"image":"INTP.png","choice":"조용하며 모험적이고 일 잘하는 탐험가","explain":"(괴짜😱)"},
 }
 
 function start() {
@@ -44,7 +44,10 @@ function next() {
         ($("#SN").val()<1) ? str+="N" : str+="S";
         ($("#TF").val()<1) ? str+="F" : str+="T";
         ($("#JP").val()<1) ? str+="P" : str+="J";
+
         $("#choice").html(result[str]["choice"]);
+        $("#image").attr("src",result[str]["image"]);
+        $("#explain").html(result[str]["explain"]);
     }
     else{
         $(".progress-bar").attr("style","width:calc(100/4*"+num+"%)");
