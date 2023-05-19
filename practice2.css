@@ -71,7 +71,7 @@ body{
 }
 #result > .result-content{
     border: 3px solid gold;
-    margin: 0px;
+    margin-top: 30px;
     font-size: 30px;
 }
 
