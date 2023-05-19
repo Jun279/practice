@@ -67,6 +67,7 @@ $("#B").click(function(){
     next();
 });
 
+// 링크 복사 태그
 function copy(){
     var url='';
     var textarea = document.createElement("textarea");
